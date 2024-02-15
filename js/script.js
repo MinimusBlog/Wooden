@@ -1,4 +1,3 @@
-
 AOS.init(); // Подключение библиотеки анимаций
 
 window.onscroll = function() {myFunction()}; //Обновленеие страницы при нажатии на лого
@@ -13,6 +12,7 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
 
 const { Client } = require('pg'); // Подключение к БД
 
