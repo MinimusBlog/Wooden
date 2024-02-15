@@ -1,7 +1,7 @@
 .main {
     padding-top: 140px;
     padding-bottom: 48px;
-    background-image: url(/img/Background.jpg);
+    background-image: url('https://i.ibb.co/WfqF1Qx/Background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
