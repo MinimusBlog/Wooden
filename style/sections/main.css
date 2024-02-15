@@ -17,7 +17,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     font-size: 48px;
-    color: #FFFFFF;
+    color: var(--color-txt);
 }
 
 .main__icon {
@@ -38,7 +38,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 24px;
-    color: #FFFFFF;
+    color: var(--color-txt);
 }
 
 .main__btn {
@@ -49,11 +49,11 @@
 }
 
 .catalog-button {
-    background-color: #44B51C;
+    background-color: var(--color-btn);
     border: none;
     border-radius: 10px;
     padding: 23px 64px 23px 64px;
-    color: #FFFFFF;
+    color: var(--color-txt);
     font-size: 28px;
     font-weight: 700;
 }
