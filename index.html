@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
     <title>Wooden</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/switcher-pages.js"></script>
+    <script src="/js/gallery.js"></script>
 </head>
 
 <body>
@@ -24,9 +26,9 @@
                     <ul class="header__list">
                         <li class="header__link menu-item-active"><a href="#" class="">О нас</a></li>
                         <li class="header__link"><a href="#">Каталог</a></li>
-                        <li class="header__link"><a href="#">Галерея</a></li>
+                        <li class="header__link menu-item-active"><a href="#gallery" class="">Галерея</a></li>
                         <li class="header__link"><a href="#">Акции</a></li>
-                        <li class="header__link"><a href="#">Контакты</a></li>
+                        <li class="header__link"><a href="#">Контакты</a></li>ы
                     </ul>
                 </nav>
                 <div class="header__icon">
@@ -41,34 +43,55 @@
         <section class="main">
             <div class="container">
                 <div class="main__wrapper">
-                    <h1 class="main__text" data-aos="zoom-in", data-aos-easing="ease-in-out">Изделия из массива дерева</h1>
+                    <h1 class="main__text">Изделия из массива дерева</h1>
                 </div>
                 <div class="main__list">
-                    <img src="./img/factory.svg" alt="Производство" class="main__icon" data-aos="flip-right", data-aos-delay="80">
-                    <p class="main__txt" data-aos="flip-right", data-aos-delay="80">Собственное производство</p>
-                    <img src="./img/ecology.svg" alt="Экологические материалы" class="main__icon" data-aos="flip-right", data-aos-delay="80">
-                    <p class="main__txt" data-aos="flip-right", data-aos-delay="80">Экологические материалы</p>
-                    <img src="./img/calendar-clock.svg" alt="Сроки изготовления" class="main__icon" data-aos="flip-right", data-aos-delay="80">
-                    <p class="main__txt" data-aos="flip-right", data-aos-delay="80">Сроки изготовления</p>
+                    <img src="./img/factory.svg" alt="Производство" class="main__icon">
+                    <p class="main__txt">Собственное производство</p>
+                    <img src="./img/ecology.svg" alt="Экологические материалы" class="main__icon">
+                    <p class="main__txt">Экологические материалы</p>
+                    <img src="./img/calendar-clock.svg" alt="Сроки изготовления" class="main__icon">
+                    <p class="main__txt">Сроки изготовления</p>
                 </div>
                 <div class="main__btn">
-                    <button onclick="" class="catalog-button" data-aos="zoom-out", data-aos-delay="50", data-aos-once="false">Каталог</button>
+                    <button onclick="" class="catalog-button">Каталог</button>
                 </div>
             </div>
         </section>
-        <section class="cards">
+        <!-- <section class="cards">
             <div class="container">
                 <div class="cards__wrapper">
                     <h1>Каталог</h1>
+                    <h1>Каталог</h1>
+                    <h1>Каталог</h1>
+                    <h1>Каталог</h1>
+                    <h1>Каталог</h1>
+                    <h1>Каталог</h1>
+                    <h1>Каталог</h1>
+                    <h1>Каталог</h1>
+                </div>
+            </div>
+        </section> -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="gallery__wrapper">
+                    <h2 class="gallery__text">Галерея</h2>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://i.ibb.co/DbQckym/oak-1.jpg"></div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/rxqN5DC/oak-truck-2.jpg"></div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/Pmzy4nq/oak-factory-3.jpg"></div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/12sHv5F/pine-1.jpg"></div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/ZmRcGRS/pine-truck-2.jpg"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> <!-- Переместили стрелки внутрь контейнера -->
                 </div>
             </div>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="dist/js/bvi.min.js"></script>
-    <script src="/js/script.js"></script>
 </body>
 
 </html>

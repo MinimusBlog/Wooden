@@ -1,4 +1,9 @@
-AOS.init(); // Подключение библиотеки анимаций
+// AOS.init(); // Подключение библиотеки анимаций
+// window.addEventListener('load', AOS.refresh)
+
+// $(function() {
+//       AOS.init();s
+//  });s
 
 window.onscroll = function() {myFunction()}; //Обновленеие страницы при нажатии на лого
 

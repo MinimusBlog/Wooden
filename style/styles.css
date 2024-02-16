@@ -3,6 +3,8 @@
 @import url('sections/cards.css');
 @import url('sections/gallery.css');
 @import url('sections/login-form.css');
+@import url('sections/gallery.css');
+@import url('sections/aos.css');
 @import url('settings/var.css');
 
 
@@ -12,6 +14,10 @@
     margin: 0;
     padding: 0;
 }
+
+/* .active {
+  display: block !important;
+} */
 
 @media screen and (max-width: 1920px) {
   .container {
