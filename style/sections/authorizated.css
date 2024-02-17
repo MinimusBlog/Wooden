@@ -1,0 +1,85 @@
+body.modal__open {
+    overflow: hidden;
+}
+
+.popup__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.popup h2 {
+    margin-top: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.popup form {
+    margin-top: 20px;
+}
+
+.popup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup input[type="text"],
+.popup input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.popup button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-btn);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button[type="submit"]:hover {
+    background: var(--color-hovr-btn);
+}
+
+#register__form {
+    display: none;
+}
+
+.toggle__form { /* переключение формы */
+    display: block;
+    margin-top: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.close__popup { /*/!* кнопка закрытия popup *!/*/
+    display: block;
+    margin-top: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}

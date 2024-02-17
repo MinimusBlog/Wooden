@@ -11,10 +11,8 @@
     <title>Wooden</title>
     <link rel="stylesheet" href="style/sections/aos.css">
     <link rel="stylesheet" href="style/sections/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/sections/authorizated.css">
     <link rel="stylesheet" href="style/styles.css">
-    <!-- <script src="/js/script.js"></script>
-        <script src="/js/switcher-pages.js"></script>
-        <script src="/js/gallery.js"></script> -->
 </head>
 
 <body>
@@ -32,8 +30,8 @@
                     </ul>
                 </nav>
                 <div class="header__icon">
-                    <a href="pages/login.html" class="header__icon">
-                        <img src="img/circle-user-round.svg" alt="Икнока пользователя">
+                    <a href="#" id="login__link" class="header__icon">
+                        <img src="img/circle-user-round.svg" alt="Иконка пользователя">
                     </a>
                 </div>
             </div>
@@ -64,44 +62,66 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="cards">
-                <div class="container">
-                    <div class="cards__wrapper">
-                        <h1>Каталог</h1>
-                        <h1>Каталог</h1>
-                        <h1>Каталог</h1>
-                        <h1>Каталог</h1>
-                        <h1>Каталог</h1>
-                        <h1>Каталог</h1>
-                        <h1>Каталог</h1>
-                        <h1>Каталог</h1>
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="gallery__wrapper">
+                    <h2 class="gallery__text">Галерея</h2>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://i.ibb.co/DbQckym/oak-1.jpg" alt="Массив дуба">
+                        </div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/rxqN5DC/oak-truck-2.jpg" alt="Массив дуба">
+                        </div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/Pmzy4nq/oak-factory-3.jpg" alt="Массив дуба">
+                        </div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/12sHv5F/pine-1.jpg" alt="Массив сосны">
+                        </div>
+                        <div class="swiper-slide"><img src="https://i.ibb.co/ZmRcGRS/pine-truck-2.jpg" alt="Массив сосны">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        <section popup__window>
+            <div class="container">
+            <div class="popup__overlay">
+                <div class="popup container">
+                    <div class="popup__inner hidden">
+                        <h2>Wooden</h2>
+                        <form id="login__form">
+                            <label for="login__username">Логин</label>
+                            <input type="text" id="login__username" required>
+                            <label for="login__password">Пароль</label>
+                            <input type="password" id="login__password" required>
+                            <button type="submit">Войти</button>
+                        </form>
+
+                        <form id="register__form">
+                            <label for="register__username">Логин</label>
+                            <input type="text" id="register__username" required>
+                            <label for="register__password">Пароль</label>
+                            <input type="password" id="register__password" required>
+                            <button type="submit">Регистрация</button>
+                        </form>
+
+                        <button class="toggle__form">Зарегистрироваться</button>
+                        <button class="close__popup">Закрыть</button>
                     </div>
                 </div>
-            </section> -->
-        <section class="gallery" id="gallery">
-    <div class="container">
-        <div class="gallery__wrapper">
-            <h2 class="gallery__text">Галерея</h2>
-        </div>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://i.ibb.co/DbQckym/oak-1.jpg" title="Массив дуба"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/rxqN5DC/oak-truck-2.jpg" title="Массив дуба"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/Pmzy4nq/oak-factory-3.jpg" title="Массив дуба"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/12sHv5F/pine-1.jpg" title="Массив сосны"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/ZmRcGRS/pine-truck-2.jpg" title="Массив сосны"></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-</section>
+            </div>
+        </section>
     </main>
-    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/switcher-pages.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/gallery.js"></script>
-    <script src="js/main.js"></script> 
+
 </body>
 
 </html>
