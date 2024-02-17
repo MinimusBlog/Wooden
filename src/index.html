@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Wooden</title>
+    <link rel="stylesheet" href="style/sections/aos.css">
+    <link rel="stylesheet" href="style/sections/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <!-- <script src="/js/script.js"></script>
+        <script src="/js/switcher-pages.js"></script>
+        <script src="/js/gallery.js"></script> -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo"><a href="#" onclick="location.reload()">Wooden</a></div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__link menu-item-active"><a href="#" class="">О нас</a></li>
+                        <li class="header__link"><a href="#">Каталог</a></li>
+                        <li class="header__link menu-item-active"><a href="#gallery" class="">Галерея</a></li>
+                        <li class="header__link"><a href="#">Акции</a></li>
+                        <li class="header__link"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__icon">
+                    <a href="pages/login.html" class="header__icon">
+                        <img src="img/circle-user-round.svg" alt="Икнока пользователя">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="container">
+                <div class="main__wrapper">
+                    <h1 class="main__text">Изделия из массива дерева</h1>
+                </div>
+                <div class="main__list">
+                    <img src="./img/factory.svg" alt="Производство" class="main__icon">
+                    <p class="main__txt">Собственное производство</p>
+                    <img src="./img/ecology.svg" alt="Экологические материалы" class="main__icon">
+                    <p class="main__txt">Экологические материалы</p>
+                    <img src="./img/calendar-clock.svg" alt="Сроки изготовления" class="main__icon">
+                    <p class="main__txt">Сроки изготовления</p>
+                </div>
+                <div class="main__btn">
+                    <button onclick="" class="catalog-button">Каталог</button>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="cards">
+                <div class="container">
+                    <div class="cards__wrapper">
+                        <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                    </div>
+                </div>
+            </section> -->
+        <section class="gallery" id="gallery">
+    <div class="container">
+        <div class="gallery__wrapper">
+            <h2 class="gallery__text">Галерея</h2>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://i.ibb.co/DbQckym/oak-1.jpg" title="Массив дуба"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/rxqN5DC/oak-truck-2.jpg" title="Массив дуба"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/Pmzy4nq/oak-factory-3.jpg" title="Массив дуба"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/12sHv5F/pine-1.jpg" title="Массив сосны"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/ZmRcGRS/pine-truck-2.jpg" title="Массив сосны"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
+    </main>
+    <script src="js/aos.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
