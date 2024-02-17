@@ -1,5 +1,10 @@
 import "./script";
-import "./switcher-pages";
 import "./gallery";
+import "./switcher-pages";
+// import Swiper JSs
+
+//Library
 import "./aos"
-import Swiper from 'swiper';
+
+
+
