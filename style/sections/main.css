@@ -19,7 +19,8 @@
     font-size: 48px;
     color: var(--color-txt);
     margin-left: 120px;
-    order: -1; /* Изменение порядка следования элементов */
+    order: -1;
+    /* Изменение порядка следования элементов */
 }
 
 .main__list {
@@ -27,14 +28,20 @@
     flex-direction: column;
     align-items: flex-start;
     padding-left: 120px;
-    margin-top: 60px;
+    margin-top: 80px;
+}
+
+.main__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .main__icon {
-    width: 40px; /* ширина и высота иконок */
+    width: 40px;
+    /* ширина и высота иконок */
     height: 40px;
     margin-right: 20px;
-    margin-bottom: 40px; /*  расстояние между иконками в 50px */
 }
 
 .main__icon img {
@@ -51,8 +58,6 @@
     font-size: 24px;
     color: var(--color-txt);
     margin-left: 60px;
-    margin-top: -80px;
-    margin-bottom: 40px; /* отступ снизу для компенсации изменения */
 }
 
 .main__btn {
