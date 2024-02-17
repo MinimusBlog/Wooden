@@ -7,8 +7,8 @@
 
 window.onscroll = function() {myFunction()}; //Обновленеие страницы при нажатии на лого
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+let header = document.getElementById("myHeader");
+let sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {

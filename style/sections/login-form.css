@@ -39,11 +39,11 @@
 
 .login-form button {
     width: 100%;
-    background-color: var(--color-btn);
+    background-color: #007bff;
     color: #ffffff;
     cursor: pointer;
 }
 
 .login-form button:hover {
-    background-color: var(--color-btn);
+    background-color: #0056b3;
 }
