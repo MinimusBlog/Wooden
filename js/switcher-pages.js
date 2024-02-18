@@ -1,3 +1,17 @@
+// Обновление страницы при нажатии на лого
+function handleScroll() {
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    if (window.scrollY > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
+
+
 // popup log in, reg..
 document.addEventListener('DOMContentLoaded', function () {
     // Получение элементов DOM
