@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 //переключение в нав меню на галерею
 document.addEventListener("DOMContentLoaded", function() {
     const galleryLink = document.querySelector('.header__link[href="#gallery"]');
