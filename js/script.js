@@ -6,29 +6,29 @@
 //  });
 
 
+//! Подключение к БД
+const { Client } = require('pg');
 
-const { Client } = require('pg'); // Подключение к БД
-
-// экземпляр клиента PostgreSQL
+//* экземпляр клиента PostgreSQL
 const client = new Client({
   user: 'User',
   host: 'localhost',
   database: 'wooden',
   password: '12345',
-  port: 5432, // Порт по умолчанию для PostgreSQL
+  port: 5432, //* Порт по умолчанию для PostgreSQL
 });
 
-// Подключение к базе данных
+//* Подключение к базе данных
 client.connect()
   .then(() => console.log('Connected to PostgreSQL'))
   .catch(err => console.error('Connection error', err.stack));
 
-// Пример выполнения SQL-запроса
+//* Пример выполнения SQL-запроса
 client.query('SELECT * FROM your_table')
   .then(result => console.log(result.rows))
   .catch(err => console.error('Query error', err.stack));
 
-// Закрытие соединения с базой данных
+//* Закрытие соединения с базой данных
 client.end()
   .then(() => console.log('Connection closed'))
   .catch(err => console.error('Error closing connection', err.stack));
