@@ -74,6 +74,37 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const registerForm = document.getElementById('register__form');
+    registerForm.addEventListener('submit', async function(event) {
+        event.preventDefault(); // Предотвращаем стандартное поведение формы (перезагрузка страницы)
+        
+        const username = document.getElementById('register__username').value;
+        const password = document.getElementById('register__password').value;
+
+        try {
+            const response = await fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                console.log('User registered:', data.user);
+                // Дополнительные действия, например, перенаправление на другую страницу
+            } else {
+                console.error('Registration failed');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
+});
+
+
 //! переключение в нав меню на галерею
 document.addEventListener("DOMContentLoaded", function() {
     const galleryLink = document.querySelector('.header__link[href="#gallery"]');
