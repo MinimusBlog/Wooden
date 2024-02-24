@@ -32,11 +32,30 @@
             <input type="password" id="password2" name="password2" placeholder="Confirm Password" required />
         </div>
         <div>
+            <input type="checkbox" id="showPasswordCheckbox"> Show Password
+        </div>
+        <div>
             <input type="submit" value="Register" />
         </div>
 
         <a href="/users/login">Already registered? Login here</a>
     </form>
+
+    <script>
+        const passwordField = document.getElementById("password");
+        const password2Field = document.getElementById("password2");
+        const showPasswordCheckbox = document.getElementById("showPasswordCheckbox");
+
+        showPasswordCheckbox.addEventListener("change", function () {
+            if (showPasswordCheckbox.checked) {
+                passwordField.type = "text";
+                password2Field.type = "text";
+            } else {
+                passwordField.type = "password";
+                password2Field.type = "password";
+            }
+        });
+    </script>
 </body>
 
 </html>
