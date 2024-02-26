@@ -1,25 +1,30 @@
 .gallery {
-    height: 100%;
+    padding-top: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gallery__wrapper {
     display: flex;
-    padding-top: 80px;
-    margin-left: 240px;
+    padding-top: 50px;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 .gallery__text {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 42px;
     color: #000000;
 }
 
 .swiper {
-    width: 1200px;
-    height: 100%;
-    margin-top: 60px;
-    margin-bottom: 100px;
+    width: 1000px;
+    height: 70vh;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
 }
 
 .swiper-slide {
