@@ -1,15 +1,16 @@
 .gallery {
-    height: 60%;
+    padding-top: 50px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .gallery__wrapper {
     display: flex;
-    padding-top: 80px;
+    padding-top: 50px;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .gallery__text {
@@ -20,10 +21,10 @@
 }
 
 .swiper {
-    width: 1200px;
-    height: 80vh;
+    width: 1000px;
+    height: 70vh;
     /* margin-top: 20px; */
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .swiper-slide {
@@ -43,14 +44,14 @@
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
     color: var(--color-btn) !important;
-    right: 70px !important;
+    right: 60px !important;
     left: auto;
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
     color: var(--color-btn) !important;
-    left: 70px !important;
+    left: 60px !important;
     right: auto;
 }
 
