@@ -1,0 +1,36 @@
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.categories__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 25px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.category {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #E2E7EC;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover {
+    background-color: var(--color-btn);
+}
+
+.category.selected {
+    background-color: var(--color-btn);
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+}
