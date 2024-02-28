@@ -3,59 +3,89 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style/sections/header-host.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Login</title>
 </head>
-
 <body>
-    <h1>Login</h1>
-
-    <ul>
-        <% if (typeof errors !='undefined' ) { %>
-            <% errors.forEach(error=> { %>
-                <li>
-                    <%= error.message %>
-                </li>
-                <% }) %>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo"><a href="../index.html" onclick="location.reload()">Wooden</a></div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__link menu-item-active"><a href="#" class>О нас</a></li>
+                        <li class="header__link"><a href="#">Каталог</a></li>
+                        <li class="header__link menu-item-active"><a href="#gallery" class>Галерея</a></li>
+                        <li class="header__link"><a href="#">Акции</a></li>
+                        <li class="header__link"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__icon">
+                    <a href="http://localhost:4000/users/login">
+                        <img src="../img/circle-user-round.svg" alt="Войти в аккаунт">
+                    </a>
+                    <a href="#">
+                        <img src="../img/shopping-cart.svg" alt="Корзина товаров">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Login</h1>
+        
+            <ul>
+                <% if (typeof errors !='undefined' ) { %>
+                    <% errors.forEach(error=> { %>
+                        <li>
+                            <%= error.message %>
+                        </li>
+                        <% }) %>
+                            <% } %>
+            </ul>
+        
+            <ul>
+                <% if(messages.success_msg) { %>
+                    <li>
+                        <%= messages.success_msg %>
+                    </li>
                     <% } %>
-    </ul>
-
-    <ul>
-        <% if(messages.success_msg) { %>
-            <li>
-                <%= messages.success_msg %>
-            </li>
-            <% } %>
-    </ul>
-
-    <ul>
-        <% if (messages.error) { %>
-            <li>
-                <%= messages.error %>
-            </li>
-            <% } %>
-    </ul>
-
-    <form action="/users/login" method="POST">
-        <div>
-            <input type="text" id="login" name="login" placeholder="Login" required />
-        </div>
-        <div>
-            <input type="password" id="password" name="password" placeholder="Password" required />
-        </div>
-        <div>
-            <input type="checkbox" id="showPasswordCheckbox"> Show Password
-        </div>
-        <div>
-            <input type="submit" value="Login" />
-        </div>
-
-        <a href="/users/register">Register</a>
-    </form>
+            </ul>
+        
+            <ul>
+                <% if (messages.error) { %>
+                    <li>
+                        <%= messages.error %>
+                    </li>
+                    <% } %>
+            </ul>
+        
+            <form action="/users/login" method="POST">
+                <div>
+                    <input type="text" id="login" name="login" placeholder="Login" required />
+                </div>
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Password" required />
+                </div>
+                <div>
+                    <input type="checkbox" id="showPasswordCheckbox"> Show Password
+                </div>
+                <div>
+                    <input type="submit" value="Login" />
+                </div>
+        
+                <a href="/users/register">Register</a>
+            </form>
+        </section>
+    </main>
 
     <script>
+        app.use(express.static(path.join(__dirname, 'public')));
+
         const passwordField = document.getElementById("password");
         const showPasswordCheckbox = document.getElementById("showPasswordCheckbox");
 
