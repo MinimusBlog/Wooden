@@ -5,6 +5,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: var(--color-bg);
+    opacity: 0.9;
 }
 
 .header__wrapper {
