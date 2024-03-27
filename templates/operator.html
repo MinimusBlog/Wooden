@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Interface</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .reply-form input[type='text'] {
+            width: calc(100% - 80px);
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        .reply-form button {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sent-message {
+            display: none;
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Operator Interface</h1>
+        <ul>
+            {% for user_id, messages in user_messages.items() %}
+            <li>User ID: {{ user_id }}</li>
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            <form id="replyForm_{{ user_id }}" class="reply-form" data-user-id="{{ user_id }}">
+                <input type="text" name="reply" placeholder="Your reply">
+                <input type="hidden" name="user_id" value="{{ user_id }}">
+                <button type="submit">Send</button>
+                <div class="sent-message">Message sent!</div>
+            </form>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".reply-form").submit(function (event) {
+                event.preventDefault();
+                var form = $(this);
+                var formData = form.serialize();
+                $.post("/operator-interface", formData, function (response) {
+                    // Показываем сообщение об успешной отправке
+                    form.find(".sent-message").show();
+                    // Очищаем все поля ввода после отправки
+                    $(".reply-form input[type='text']").val("");
+                    // Скрываем сообщение через несколько секунд
+                    setTimeout(function () {
+                        form.find(".sent-message").hide();
+                    }, 3000); // скрываем через 3 секунды
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
